@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập - Giao diện Xanh Lá</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="login-card">
+
+            <div class="login-header">
+                <h2>Đăng nhập</h2>
+                <div class="qr-tooltip">
+                    <div class="tooltip-text">Đăng nhập với mã QR</div>
+                    <div class="qr-icon">
+                        <i class="fa-solid fa-qrcode"></i>
+                    </div>
+                </div>
+            </div>
+
+            <form onsubmit="dangNhap(); return false;">
+                <div class="input-group">
+                    <input id="taikhoan" type="text" placeholder="Email/Số điện thoại/Tên đăng nhập">
+                </div>
+
+                <div class="input-group password-field">
+                    <input id="matkhau" type="password" placeholder="Mật khẩu">
+                    <i class="fa-regular fa-eye-slash"></i>
+                </div>
+
+                <button type="submit" class="btn-login">ĐĂNG NHẬP</button>
+            </form>
+
+            <div class="forgot-pwd">
+                <a href="#">Quên mật khẩu</a>
+            </div>
+
+            <div class="divider">
+                <span>HOẶC</span>
+            </div>
+
+            <div class="social-buttons">
+                <button class="btn-fb">
+                    <i class="fa-brands fa-facebook"></i> Facebook
+                </button>
+                <button class="btn-gg">
+                    <img src="https://img.icons8.com/color/48/google-logo.png" alt="google"> Google
+                </button>
+            </div>
+
+            <div class="footer-terms">
+                By logging in, you agree to Shopee's
+                <a href="#">Điều khoản dịch vụ</a> &
+                <a href="#">Chính sách bảo mật</a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script>
+
+        function dangNhap() {
+
+            let tk = document.getElementById("taikhoan").value;
+            let mk = document.getElementById("matkhau").value;
+
+            // kiểm tra bỏ trống
+            if (tk == "" || mk == "") {
+                alert("Vui lòng nhập tài khoản và mật khẩu!");
+                return;
+            }
+
+            let user = JSON.parse(localStorage.getItem("user"));
+
+            // kiểm tra có tài khoản chưa
+            if (user == null) {
+                alert("Chưa có tài khoản, hãy đăng ký!");
+                return;
+            }
+
+            // kiểm tra đúng tài khoản mật khẩu
+            if (tk === user.taikhoan && mk === user.matkhau) {
+                alert("Đăng nhập thành công!");
+                localStorage.setItem("currentUser", JSON.stringify(user));
+                window.location.href = "trangchuchinh.html";
+
+            } else {
+
+                alert("Sai tài khoản hoặc mật khẩu!");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đăng ký</title>
+
+<style>
+.form{
+    background-color: rgba(255, 0, 234, 0.652);
+}
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.form{
+background:white;
+padding:30px;
+border-radius:10px;
+width:350px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+input{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#28a745;
+color:white;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+button:hover{
+background:#218838;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="form">
+
+<h2>Đăng ký tài khoản</h2>
+
+<input id="hoten" placeholder="Họ tên">
+
+<input id="sdt" placeholder="Số điện thoại">
+
+<input id="diachi" placeholder="Địa chỉ">
+
+<input id="taikhoan" placeholder="Tên tài khoản">
+
+<input id="matkhau" type="password" placeholder="Mật khẩu">
+
+<input id="nhaplaimatkhau" type="password" placeholder="Nhập lại mật khẩu">
+
+<button onclick="dangKy()">Đăng ký</button>
+
+</div>
+
+<script>
+
+function dangKy(){
+
+let hoten = document.getElementById("hoten").value;
+let sdt = document.getElementById("sdt").value;
+let diachi = document.getElementById("diachi").value;
+let taikhoan = document.getElementById("taikhoan").value;
+let matkhau = document.getElementById("matkhau").value;
+let nhaplaimatkhau = document.getElementById("nhaplaimatkhau").value;
+
+// kiểm tra có nhập đủ không
+if(hoten=="" || sdt=="" || diachi=="" || taikhoan=="" || matkhau=="" || nhaplaimatkhau==""){
+
+alert("Vui lòng nhập đầy đủ thông tin!");
+return;
+
+}
+
+if(matkhau !== nhaplaimatkhau){
+alert("Mật khẩu không khớp!");
+return;
+}
+
+let user = {
+hoten: hoten,
+sdt: sdt,
+diachi: diachi,
+taikhoan: taikhoan,
+matkhau: matkhau
+};
+
+localStorage.setItem("user", JSON.stringify(user));
+
+alert("Đăng ký thành công");
+
+window.location.href = "login.html";
+
+}
+
+</script>
+</body>
+</html>

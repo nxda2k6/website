@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body {
+    /* Phông nền màu xanh lá theo yêu cầu */
+    background-color: #2ecc71; 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background-color: #fff;
+    width: 400px;
+    padding: 30px;
+    border-radius: 4px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header & QR Section */
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.login-header h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #222;
+}
+
+.qr-tooltip {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tooltip-text {
+    background-color: #fff;
+    border: 1px solid #ffbf00;
+    color: #ff9d00;
+    font-size: 13px;
+    padding: 8px 12px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.qr-icon i {
+    font-size: 35px;
+    color: #ee4d2d;
+}
+
+/* Input Fields */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    outline: none;
+    font-size: 14px;
+}
+
+.password-field {
+    position: relative;
+}
+
+.password-field i {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bbb;
+    cursor: pointer;
+}
+
+/* Login Button */
+.btn-login {
+    width: 100%;
+    background-color: #e72c0c; /* Màu cam nhạt giống ảnh */
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 2px;
+    /*cursor: not-allowed;  Giống Shopee khi chưa nhập liệu */
+    margin-top: 10px;
+}
+
+.forgot-pwd {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.forgot-pwd a {
+    text-decoration: none;
+    color: #0055aa;
+}
+
+/* Divider */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 25px 0;
+    color: #dbdbdb;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.divider span {
+    padding: 0 10px;
+    font-size: 12px;
+}
+
+/* Social Login */
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.social-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dbdbdb;
+    background: white;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-fb { color: #1877f2; }
+.btn-gg img { width: 18px; }
+
+/* Footer */
+.footer-terms {
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+}
+
+.footer-terms a {
+    text-decoration: none;
+    color: #ee4d2d;
+}

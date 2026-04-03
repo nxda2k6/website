@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ Thành Viên - Badminton Pro</title>
+    <link rel="stylesheet" href="trangchuchinh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">BADMINTON<span>PRO</span></div>
+            <nav>
+                <a href="#">Trang chủ</a>
+                <a href="lichdat.html">Lịch đặt</a>
+                <a href="#">Cửa hàng</a>
+                <a href="home1.html" class="logout-link">Đăng xuất</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <section class="left-content">
+            <h2 class="section-title">Chọn sân để đặt lịch ngay</h2>
+            <div class="court-list">
+                <div class="court-card">
+                    <img src="https://cdn0026.imgtaothao.com/media/dich-vu/thi-cong/san-cau-long/kich-thuoc-san/kich-thuoc-san-cau-long.webp"
+                        alt="Sân 1">
+                    <div class="court-info">
+                        <h3>Sân số 1 - Thảm Yonex</h3>
+                        <p>Trạng thái: <span class="available">Còn trống</span></p>
+                        <p class="price">80.000đ / giờ</p>
+                        <button class="btn-book" onclick="window.location.href='order.html'">Đặt sân</button>
+                    </div>
+                </div>
+                <div class="court-card">
+                    <img src="https://loadbalancer.dktvnblog.com/blog/wp-content/uploads/2023/11/kich-thuoc-san-cau-long-doi-va-don-khac-nhau-o-vung-ngoai-cung-duong-bien.png"
+                        alt="Sân 2">
+                    <div class="court-info">
+                        <h3>Sân số 2 - Thảm Victor</h3>
+                        <p>Trạng thái: <span class="full">Đã kín</span></p>
+                        <p class="price">75.000đ / giờ</p>
+                        <button class="btn-book" onclick="window.location.href='order.html'">Đặt sân</button>
+                    </div>
+                </div>
+                <div class="court-card">
+                    <img src="https://oct.vn/upload/files/he%20thong%20san%20the%20thao/kichthuocsancaulong.jpg"
+                        alt="Sân 3">
+                    <div class="court-info">
+                        <h3>Sân số 3 - Tiêu chuẩn</h3>
+                        <p>Trạng thái: <span class="available">Còn trống</span></p>
+                        <p class="price">70.000đ / giờ</p>
+                        <button class="btn-book" onclick="window.location.href='order.html'">Đặt sân</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <aside class="right-sidebar">
+            <div class="profile-card">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Avatar" class="user-avatar">
+                <h3 id="profileName">Nguyễn Văn Nam</h3>
+
+                <p><i class="fa-solid fa-phone"></i>
+                    <span id="profilePhone">0901 234 567</span>
+                </p>
+
+                <p><i class="fa-solid fa-location-dot"></i>
+                    <span id="profileAddress">Quận 1, TP. Hồ Chí Minh</span>
+                </p>
+
+                <p><i class="fa-solid fa-users"></i>
+                    <span id="profileGroup">CLB Cầu Lông Sáng Sớm</span>
+                </p>
+                <button class="btn-edit">Chỉnh sửa thông tin</button>
+            </div>
+        </aside>
+    </div>
+
+    <div class="container shop-section">
+        <h2 class="section-title">Phụ kiện cầu lông bán chạy</h2>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="https://dasxsport.vn/storage/thien-giay/ax88d-p-193.jpg" alt="Vợt">
+                <h4>Vợt Yonex Astrox 88D</h4>
+                <p class="p-price">3.200.000đ</p>
+            </div>
+            <div class="product-item">
+                <img src="https://down-vn.img.susercontent.com/file/vn-11134207-7ras8-m12f7ryzt6vv77" alt="Giày">
+                <h4>Giày Yonex 65Z3</h4>
+                <p class="p-price">2.550.000đ</p>
+            </div>
+            <div class="product-item">
+                <img src="https://tuanvisport.com.vn/wp-content/uploads/2024/05/ong-cau-long-thanh-cong-toc-77-tuanvisport-4.jpg"
+                    alt="Cầu">
+                <h4>Ống cầu Thành Công</h4>
+                <p class="p-price">220.000đ</p>
+            </div>
+            <div class="product-item">
+                <img src="https://cdn.hstatic.net/products/1000068606/template_sanpham22_245a7299090b4eb9918b1f70dde58b92.png"
+                    alt="Balo">
+                <h4>Balo Yonex Pro</h4>
+                <p class="p-price">1.100.000đ</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h4>LIÊN HỆ VỚI CHÚNG TÔI</h4>
+                <p><i class="fa-solid fa-headset"></i> Hotline: 1900 1234</p>
+                <p><i class="fa-solid fa-map-location-dot"></i> Địa chỉ: 123 Đường Cầu Lông, TP. Đà Nẵng</p>
+            </div>
+            <div class="footer-social">
+                <h4>HỖ TRỢ TRỰC TUYẾN</h4>
+                <a href="#"><i class="fa-brands fa-facebook"></i> Facebook Hỗ Trợ</a>
+                <a href="#"><i class="fa-brands fa-messenger"></i> Messenger</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Badminton Pro System. All rights reserved.
+        </div>
+    </footer>
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Chỉnh sửa thông tin cá nhân</h3>
+                <span class="close-btn">&times;</span>
+            </div>
+            <form id="editForm">
+                <div class="form-group">
+                    <label>Họ và tên</label>
+                    <input type="text" id="editName" ">
+                </div>
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="text" id="editPhone" ">
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <input type="text" id="editAddress" ">
+                </div>
+                <div class="form-group">
+                    <label>Tên tài khoản</label>
+                    <input type="text" id="editGroup" ">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-cancel">Hủy bỏ</button>
+                    <button type="submit" class="btn-save">Lưu thay đổi</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="chuyenhuong.js"></script>
+</body>
+
+</html>
